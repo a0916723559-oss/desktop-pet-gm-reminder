@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Desktop-Pet GM 操作紀錄提醒工具：在 Windows 本機安排並透過 Gmail 寄送給本人的紀錄保存期限提醒。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <title>Desktop-Pet GM 操作紀錄提醒工具</title>
+  <style>
+    :root { color-scheme: light; font-family: "Segoe UI", "Microsoft JhengHei", sans-serif; color: #29332c; background: #f6f3eb; }
+    body { max-width: 820px; margin: 0 auto; padding: 44px 24px; line-height: 1.85; }
+    main { background: #fffdf7; border: 1px solid #ded9c9; border-radius: 16px; padding: 30px; }
+    h1 { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.4; } h2 { font-size: 1.2rem; margin-top: 1.8em; }
+    a { color: #285d47; text-underline-offset: .2em; } li { margin: .45em 0; }
+    .note { background: #edf2e8; padding: 14px 18px; border-radius: 10px; } footer { margin-top: 24px; color: #5b6259; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Desktop-Pet GM 操作紀錄提醒工具</h1>
+  <p>這是一項供專案維護者<strong>個人使用</strong>的 Windows 本機工具，用來安排 GM 操作紀錄的保存期限提醒，以及本人明確安排的一次性寄信測試。</p>
+  <p>程式使用本人授權的 Gmail 帳戶寄信給同一個帳戶，提醒維護者檢查紀錄、匯出需要的資料，並自行決定是否刪除或調整保存方式。</p>
+
+  <h2>工具如何運作</h2>
+  <ul>
+    <li>GM 操作紀錄保存在 Windows 本機，與遊戲玩家存檔分開。</li>
+    <li>Windows 工作排程器依設定時間啟動寄信程式，遊戲本身不必保持開啟。</li>
+    <li>Gmail API 只用於寄送本人設定的提醒與測試通知，寄件人和收件人相同。</li>
+    <li>程式不讀取收件匣、郵件歷史或聯絡人，也不把遊戲存檔與操作紀錄附加到提醒信。</li>
+    <li>工具不會自動刪除操作紀錄，也不提供代替其他人批量寄信的服務。</li>
+  </ul>
+
+  <h2>Google 授權用途</h2>
+  <p>工具要求 Gmail 寄信權限，以及確認授權帳戶電子郵件身分所需的 OpenID／Email 權限。授權由本機工具開啟 Google 官方登入頁，由使用者親自同意；本網站不提供登入表單，也不收取 Gmail 密碼。</p>
+  <p class="note">此提醒工具使用的 Google Cloud OAuth 專案品牌名稱為 <strong>AI-Announcement-Translator</strong>，專用桌面用戶端名稱為 <strong>Desktop-Pet GM 寄信</strong>。本頁說明的是 Desktop-Pet 的提醒功能。</p>
+
+  <h2>資料與使用者控制</h2>
+  <p>授權憑證以 Windows DPAPI 加密後保存在目前 Windows 使用者的本機資料夾，沒有工具營運方的雲端帳戶或資料儲存伺服器。寄信仍需要可用的 Google 授權、網路與符合條件的 Windows 登入環境；程式不保證授權永遠有效。</p>
+  <p>資料種類、用途、保存方式、第三方服務及撤銷方式，請閱讀 <a href="privacy.html">隱私權政策</a>。</p>
+
+  <h2>維護與聯絡</h2>
+  <p>維護者：GitHub 帳號 <a href="https://github.com/a0916723559-oss">a0916723559-oss</a>。</p>
+  <p>可在 <a href="https://github.com/a0916723559-oss/desktop-pet-gm-reminder/issues">網站儲存庫的 Issues</a> 提出問題。公開留言請勿提供密碼、OAuth JSON、授權憑證或私人操作紀錄。</p>
+</main>
+<footer>Desktop-Pet GM 提醒工具 · <a href="privacy.html">隱私權政策</a></footer>
+</body>
+</html>
